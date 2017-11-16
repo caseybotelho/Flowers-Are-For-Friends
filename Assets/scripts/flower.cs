@@ -29,6 +29,10 @@ public class flower : MonoBehaviour {
         col.enabled = !col.enabled;
 	}
 
+	public void Drop() {
+		col.enabled = !col.enabled;
+	}
+
     public void Flip() {
         direction *= -1;
     }

@@ -77,6 +77,7 @@ public class alium : MonoBehaviour {
         if (Input.GetMouseButtonDown(1)) {
             if (myFlower) { 
                 myFlower.attached = false;
+				myFlower.Drop ();
             } 
         }
     }
