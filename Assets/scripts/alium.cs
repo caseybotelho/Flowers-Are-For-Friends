@@ -58,7 +58,9 @@ public class alium : MonoBehaviour {
             RaycastHit2D hit = Physics2D.CircleCast(transform.position, 2.0f, transform.up, 2.0f);
             if (hit.collider) {
                 myFriend = hit.transform.gameObject.GetComponent<friend>();
-                myFlower = hit.transform.gameObject.GetComponent<flower>();
+				if (myFlower == null) {
+					myFlower = hit.transform.gameObject.GetComponent<flower> ();
+				}
                 // pass position and rotation to potential so it knows where to fly away from
                 if (myFlower) {
                     myFlower.alium = this.gameObject;
@@ -67,8 +69,12 @@ public class alium : MonoBehaviour {
                 if (myFriend) {
                     if (myFlower && myFlower.attached){
                         Debug.Log("i love you!");
-                    } else {
-                        Debug.Log("hey!");
+						Destroy (myFlower.gameObject);
+						myFriend.GotGift ();
+						myFriend = null;
+					} else {
+						myFriend.Hey ();
+						myFriend = null;
                     }
                 }
             }
@@ -78,6 +84,7 @@ public class alium : MonoBehaviour {
             if (myFlower) { 
                 myFlower.attached = false;
 				myFlower.Drop ();
+				myFlower = null;
             } 
         }
     }

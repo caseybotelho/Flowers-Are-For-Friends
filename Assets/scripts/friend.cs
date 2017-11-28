@@ -4,13 +4,28 @@ using UnityEngine;
 
 public class friend : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
+	public int gifts = 0;
+
+	private string def = "Hey! This is what I say by default!";
+
+	private string curMes;
+
+	void Start() {
+		curMes = def;
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 		
+	}
+
+	public void Hey() {
+		Debug.Log (curMes);
+	}
+
+	public void GotGift() {
+		gifts++;
+		if (gifts > 3) {
+			curMes = string.Concat("You've given me ", gifts, " flowers! I love you!");
+		}
 	}
 }
