@@ -1,9 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\alium.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\friend.cs">
     <Files>
       <File FileName="Assets\scripts\flower.cs" Line="32" Column="22" />
-      <File FileName="Assets\scripts\alium.cs" Line="80" Column="22" />
+      <File FileName="Assets\scripts\alium.cs" Line="77" Column="10" />
+      <File FileName="Assets\scripts\friend.cs" Line="18" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

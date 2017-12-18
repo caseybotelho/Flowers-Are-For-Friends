@@ -54,6 +54,8 @@
      <Compile Include="Assets\scripts\alium.cs" />
      <Compile Include="Assets\scripts\flower.cs" />
      <Compile Include="Assets\scripts\friend.cs" />
+     <Compile Include="Assets\scripts\maincamera.cs" />
+     <Compile Include="Assets\scripts\ui.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
