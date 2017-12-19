@@ -51,7 +51,10 @@ public class friend : MonoBehaviour {
 		    	ChangeDirection ();
 		    }
         } else {
-
+			Vector3 alienDir = alien.transform.position - transform.position;
+			float angle = Mathf.Atan2(alienDir.y, alienDir.x) * Mathf.Rad2Deg;
+			Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
+			transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.deltaTime * 6);
         }
 	}
 
@@ -77,11 +80,15 @@ public class friend : MonoBehaviour {
     }
 
 	void OnTriggerEnter2D(Collider2D other) {
-        talkedTo = true;
+		if (other.transform.position == alien.transform.position) {
+			talkedTo = true;
+		}
 	}
 
 	void OnTriggerExit2D(Collider2D other) {
-        talkedTo = false;
+		if (other.transform.position == alien.transform.position) {
+			talkedTo = false;
+		}
 	}
 
 	private void ChangeDirection() {
