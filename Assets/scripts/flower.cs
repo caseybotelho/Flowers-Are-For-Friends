@@ -12,9 +12,19 @@ public class flower : MonoBehaviour {
 
     public BoxCollider2D col;
 
+    public enum FlowerTypes {
+        snapdragon,
+        tulip,
+        dandelion
+    }
+
+    public FlowerTypes chooseFlower = FlowerTypes.tulip;
+    public string whatFlower;
+
 	void Start () {
         col = GetComponent<BoxCollider2D>();
-	}
+        whatFlower = chooseFlower.ToString();
+    }
 	
 	void Update () {
 		if (attached) {

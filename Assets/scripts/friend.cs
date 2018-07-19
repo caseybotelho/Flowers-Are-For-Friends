@@ -11,7 +11,8 @@ public class friend : MonoBehaviour {
 
 	private string def = "Hey! This is what I say by default!";
     private string thanks = "Wow! I love you!";
-	private string curMes;
+    private string nah = "I'm not a fan of this one";
+    private string curMes;
 
 	private float rot = 0;
 
@@ -27,6 +28,16 @@ public class friend : MonoBehaviour {
 
     private bool talkedTo;
 
+    public enum FlowerTypes {
+        snapdragon,
+        tulip,
+        dandelion
+    }
+
+    public FlowerTypes prefer = FlowerTypes.snapdragon;
+
+    public string whatFlower;
+
 	[SerializeField] Canvas speechCanvas;
 	[SerializeField] Text speech;
 
@@ -37,7 +48,9 @@ public class friend : MonoBehaviour {
 
 		rot = Random.Range(0, 360);
 		delta = 0;
-	}
+
+        whatFlower = prefer.ToString();
+    }
 
     void Update() {
         if (talkedTo == false) { 
@@ -76,6 +89,12 @@ public class friend : MonoBehaviour {
         }
         talkedTo = true;
         speech.text = thanks;
+        speechCanvas.enabled = true;
+    }
+
+	public void NoThanks() {
+        talkedTo = true;
+        speech.text = nah;
         speechCanvas.enabled = true;
     }
 

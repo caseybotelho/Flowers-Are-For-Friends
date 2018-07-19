@@ -19,7 +19,7 @@ public class alium : MonoBehaviour {
 
     public bool talking;
 
-	void Start() {
+    void Start() {
 		lover = GetComponent<CharacterController> ();
 
 		Cursor.lockState = CursorLockMode.Locked;
@@ -76,9 +76,13 @@ public class alium : MonoBehaviour {
                     if (myFriend) {
                         talking = true;
                         if (myFlower && myFlower.attached){
-                            Debug.Log("i love you!");
-			    			Destroy (myFlower.gameObject);
-			    			myFriend.GotGift ();
+                            if (myFlower.whatFlower == myFriend.whatFlower) { 
+                                Debug.Log("i love you!");
+			    			    Destroy (myFlower.gameObject);
+			    			    myFriend.GotGift ();
+                            } else {
+                                myFriend.NoThanks();
+                            }
 			    		} else {
 			    			myFriend.Hey ();
                         }
