@@ -30,8 +30,8 @@ public class friend : MonoBehaviour {
 
     public enum FlowerTypes {
         snapdragon,
-        tulip,
-        dandelion
+        dandelion,
+        night_rider
     }
 
     public FlowerTypes prefer = FlowerTypes.snapdragon;

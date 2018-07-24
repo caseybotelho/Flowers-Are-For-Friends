@@ -14,11 +14,11 @@ public class flower : MonoBehaviour {
 
     public enum FlowerTypes {
         snapdragon,
-        tulip,
-        dandelion
+        dandelion,
+        night_rider
     }
 
-    public FlowerTypes chooseFlower = FlowerTypes.tulip;
+    public FlowerTypes chooseFlower = FlowerTypes.snapdragon;
     public string whatFlower;
 
 	void Start () {
