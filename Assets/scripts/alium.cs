@@ -109,6 +109,20 @@ public class alium : MonoBehaviour {
 		    		myFlower = null;
                 } 
             }
+            if (Input.GetKeyDown("e")) {
+                if (myFlower) { 
+                    if (myFlower.whatFlower == "snapdragon") {
+                        menuBehaviour.snapTotal++;
+                        Destroy(myFlower.gameObject);
+                    } else if (myFlower.whatFlower == "night_rider") {
+                        menuBehaviour.nightTotal++;
+                        Destroy(myFlower.gameObject);
+                    } else if (myFlower.whatFlower == "dandelion") {
+                        menuBehaviour.dandTotal++;
+                        Destroy(myFlower.gameObject);
+                    }
+                }
+            }
         }
     }
 }

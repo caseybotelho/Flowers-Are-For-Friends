@@ -1,12 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class inventory : MonoBehaviour {
 
-	public Canvas mainMenu;
+	private Canvas mainMenu;
 
-	void Start () {
+    public int snapTotal = 0;
+    public int nightTotal = 0;
+    public int dandTotal = 0;
+
+    [SerializeField] private Text snapText;
+    [SerializeField] private Text nightText;
+    [SerializeField] private Text dandText;
+
+    void Start () {
 		mainMenu = GetComponent<Canvas> ();
         mainMenu.enabled = false;
     }
@@ -15,5 +24,8 @@ public class inventory : MonoBehaviour {
         if (Input.GetKeyDown("space")) {
             mainMenu.enabled = !mainMenu.enabled;
         }
+        snapText.text = snapTotal.ToString();
+        nightText.text = nightTotal.ToString();
+        dandText.text = dandTotal.ToString();
     }
 }
