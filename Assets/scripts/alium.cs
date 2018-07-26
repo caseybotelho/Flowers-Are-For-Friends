@@ -5,6 +5,7 @@ using UnityEngine;
 public class alium : MonoBehaviour {
 
     [SerializeField] private Canvas mainMenu;
+    [SerializeField] private GameObject controller;
 
     private const float baseSpeed = 6.0f;
 	private const float rotSens = 9.0f;
@@ -19,6 +20,7 @@ public class alium : MonoBehaviour {
     flower myFlower;
     friend myFriend;
     inventory menuBehaviour;
+    gamecontroller behaviour;
 
     public bool talking;
 
@@ -31,6 +33,8 @@ public class alium : MonoBehaviour {
         talking = false;
 
         menuBehaviour = mainMenu.GetComponent<inventory>();
+
+        behaviour = controller.GetComponent<gamecontroller>();
     }
 
     void Update() {
@@ -121,6 +125,42 @@ public class alium : MonoBehaviour {
                         menuBehaviour.dandTotal++;
                         Destroy(myFlower.gameObject);
                     }
+                }
+            }
+            if (Input.GetKeyDown("1")) { 
+                if (menuBehaviour.snapTotal > 0 && myFlower.whatFlower != "snapdragon") { 
+                    if (myFlower.whatFlower == "night_rider") {
+                        menuBehaviour.nightTotal++;
+                    } else if (myFlower.whatFlower == "dandelion") { 
+                        menuBehaviour.dandTotal++;
+                    }
+                    menuBehaviour.snapTotal--;
+                    myFlower.GetComponent<SpriteRenderer>().sprite = behaviour.flowerSprites[1];
+                    myFlower.whatFlower = "snapdragon";
+                }
+            }
+            if (Input.GetKeyDown("2")) { 
+                if (menuBehaviour.nightTotal > 0 && myFlower.whatFlower != "night_rider") {
+                    if (myFlower.whatFlower == "snapdragon") {
+                        menuBehaviour.snapTotal++;
+                    } else if (myFlower.whatFlower == "dandelion") { 
+                        menuBehaviour.dandTotal++;
+                    }
+                    menuBehaviour.nightTotal--;
+                    myFlower.GetComponent<SpriteRenderer>().sprite = behaviour.flowerSprites[2];
+                    myFlower.whatFlower = "night_rider";
+                }
+            }
+            if (Input.GetKeyDown("3")) { 
+                if (menuBehaviour.dandTotal > 0 && myFlower.whatFlower != "dandelion") {
+                    if (myFlower.whatFlower == "snapdragon") {
+                        menuBehaviour.snapTotal++;
+                    } else if (myFlower.whatFlower == "night_rider") { 
+                        menuBehaviour.nightTotal++;
+                    }
+                    menuBehaviour.dandTotal--;
+                    myFlower.GetComponent<SpriteRenderer>().sprite = behaviour.flowerSprites[3];
+                    myFlower.whatFlower = "dandelion";
                 }
             }
         }
