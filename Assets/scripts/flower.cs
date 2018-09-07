@@ -12,6 +12,12 @@ public class flower : MonoBehaviour {
 
     public BoxCollider2D col;
 
+    [SerializeField] Sprite snapSprite;
+    [SerializeField] Sprite dandSprite;
+    [SerializeField] Sprite nightSprite;
+
+    private SpriteRenderer flowerSprite;
+
     public enum FlowerTypes {
         snapdragon,
         dandelion,
@@ -21,9 +27,11 @@ public class flower : MonoBehaviour {
     public FlowerTypes chooseFlower = FlowerTypes.snapdragon;
     public string whatFlower;
 
-	void Start () {
+	void Awake () {
         col = GetComponent<BoxCollider2D>();
         whatFlower = chooseFlower.ToString();
+        flowerSprite = GetComponent<SpriteRenderer>();
+        flowerSprite.sprite = snapSprite;
     }
 	
 	void Update () {
@@ -32,6 +40,13 @@ public class flower : MonoBehaviour {
 
 			transform.position = new Vector3(xPos, alium.transform.position.y , 0);
 		}
+        if (whatFlower == "snapdragon" && flowerSprite.sprite != snapSprite) {
+            flowerSprite.sprite = snapSprite;
+        } else if (whatFlower == "dandelion" && flowerSprite.sprite != dandSprite) {
+            flowerSprite.sprite = dandSprite;
+        } else if (whatFlower == "night_rider" && flowerSprite.sprite != nightSprite) {
+            flowerSprite.sprite = nightSprite;
+        }
 	}
 
 	public void newPos() {

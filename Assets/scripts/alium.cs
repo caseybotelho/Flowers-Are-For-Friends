@@ -7,6 +7,9 @@ public class alium : MonoBehaviour {
     [SerializeField] private Canvas mainMenu;
     [SerializeField] private GameObject controller;
 
+    [SerializeField] private GameObject flowerPrefab;
+    private GameObject flower;
+
     private const float baseSpeed = 6.0f;
 	private const float rotSens = 9.0f;
 
@@ -80,8 +83,7 @@ public class alium : MonoBehaviour {
 		    	    	}
                         // pass position and rotation to potential so it knows where to fly away from
                         if (myFlower && myFlower.attached == false) {
-                            myFlower.alium = this.gameObject;
-                            myFlower.newPos();
+                            ChangePos();
                         }
                         if (myFriend) {
                             talking = true;
@@ -118,12 +120,15 @@ public class alium : MonoBehaviour {
                     if (myFlower.whatFlower == "snapdragon") {
                         menuBehaviour.snapTotal++;
                         Destroy(myFlower.gameObject);
+                        myFlower.whatFlower = null;
                     } else if (myFlower.whatFlower == "night_rider") {
                         menuBehaviour.nightTotal++;
                         Destroy(myFlower.gameObject);
+                        myFlower.whatFlower = null;
                     } else if (myFlower.whatFlower == "dandelion") {
                         menuBehaviour.dandTotal++;
                         Destroy(myFlower.gameObject);
+                        myFlower.whatFlower = null;
                     }
                 }
             }
@@ -135,8 +140,12 @@ public class alium : MonoBehaviour {
                         menuBehaviour.dandTotal++;
                     }
                     menuBehaviour.snapTotal--;
-                    myFlower.GetComponent<SpriteRenderer>().sprite = behaviour.flowerSprites[1];
+                    flower = Instantiate(flowerPrefab) as GameObject;
+                    myFlower = flower.GetComponent<flower>();
                     myFlower.whatFlower = "snapdragon";
+                    myFlower.alium = this.gameObject;
+                    myFlower.attached = true;
+                    myFlower.col.enabled = false;
                 }
             }
             if (Input.GetKeyDown("2")) { 
@@ -147,8 +156,12 @@ public class alium : MonoBehaviour {
                         menuBehaviour.dandTotal++;
                     }
                     menuBehaviour.nightTotal--;
-                    myFlower.GetComponent<SpriteRenderer>().sprite = behaviour.flowerSprites[2];
+                    flower = Instantiate(flowerPrefab) as GameObject;
+                    myFlower = flower.GetComponent<flower>();
                     myFlower.whatFlower = "night_rider";
+                    myFlower.alium = this.gameObject;
+                    myFlower.attached = true;
+                    myFlower.col.enabled = false;
                 }
             }
             if (Input.GetKeyDown("3")) { 
@@ -159,10 +172,19 @@ public class alium : MonoBehaviour {
                         menuBehaviour.nightTotal++;
                     }
                     menuBehaviour.dandTotal--;
-                    myFlower.GetComponent<SpriteRenderer>().sprite = behaviour.flowerSprites[3];
+                    flower = Instantiate(flowerPrefab) as GameObject;
+                    myFlower = flower.GetComponent<flower>();
                     myFlower.whatFlower = "dandelion";
+                    myFlower.alium = this.gameObject;
+                    myFlower.attached = true;
+                    myFlower.col.enabled = false;
                 }
             }
         }
+    }
+
+    private void ChangePos() { 
+        myFlower.alium = this.gameObject;
+        myFlower.newPos();
     }
 }
