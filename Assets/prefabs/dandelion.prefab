@@ -81,6 +81,9 @@ MonoBehaviour:
   alium: {fileID: 0}
   attached: 0
   col: {fileID: 0}
+  snapSprite: {fileID: 21300000, guid: cd88c2a83777b8949bb0809c07c8f9e5, type: 3}
+  dandSprite: {fileID: 21300000, guid: 9b9bd846cdeae7e478839ae5148ced68, type: 3}
+  nightSprite: {fileID: 21300000, guid: 99997619573d2954081c2eacc95d2c36, type: 3}
   chooseFlower: 1
   whatFlower: 
 --- !u!212 &212173639642437206

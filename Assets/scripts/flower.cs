@@ -37,8 +37,10 @@ public class flower : MonoBehaviour {
 	void Update () {
 		if (attached) {
 			float xPos = alium.transform.position.x - (1.0f * direction);
-
 			transform.position = new Vector3(xPos, alium.transform.position.y , 0);
+            if (flowerSprite.enabled == false) {
+                flowerSprite.enabled = true;
+            }
 		}
         if (whatFlower == "snapdragon" && flowerSprite.sprite != snapSprite) {
             flowerSprite.sprite = snapSprite;
