@@ -10,7 +10,7 @@ public class alium : MonoBehaviour {
     [SerializeField] private GameObject flowerPrefab;
     private GameObject flower;
 
-    private const float baseSpeed = 6.0f;
+    private const float baseSpeed = 3.0f;
 	private const float rotSens = 9.0f;
 
 	float currentDir = -1;
