@@ -10,14 +10,14 @@ public class friend : MonoBehaviour {
 	public int gifts = 0;
 
 	private string def = "Hey! This is what I say by default!";
-    private string thanks = "Wow! I love you!";
+    private string thanks = "Wow! What a friend!";
     private string nah = "I'm not a fan of this one";
     private string curMes;
 
 	private float rot = 0;
 
-	private float speed = 2.0f;
-	private float maxSpeed = 3.0f;
+	private float speed = 1.0f;
+	private float maxSpeed = 2.0f;
 	private float minSpeed = .5f;
 
 	float wait = 0;
@@ -85,7 +85,7 @@ public class friend : MonoBehaviour {
 	public void GotGift() {
 		gifts++;
 		if (gifts > 3) {
-			curMes = string.Concat("You've given me ", gifts, " flowers! I love you!");
+			curMes = string.Concat("You've given me ", gifts, " flowers! You're alright for an alien!");
         }
         talkedTo = true;
         speech.text = thanks;
