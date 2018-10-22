@@ -421,6 +421,7 @@ GameObject:
   - component: {fileID: 75964560}
   - component: {fileID: 75964559}
   - component: {fileID: 75964558}
+  - component: {fileID: 75964563}
   m_Layer: 0
   m_Name: trebbis
   m_TagString: Untagged
@@ -441,6 +442,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alien: {fileID: 1200047131}
   gifts: 0
+  love: You're alright for an alien!
   prefer: 1
   whatFlower: 
   speechCanvas: {fileID: 116707338}
@@ -548,6 +550,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &75964563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 75964557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b92383ff7d5c50748bc5b7840862d27e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  def: Sorry, I'm just not in the mood... maybe another time, little guy.
+  thanks: Hey... how did you know this was my favorite flower...?
+  nah: You keep it... It's not really my thing...
+  love: 
+  gifts: 0
 --- !u!1 &98120703
 GameObject:
   m_ObjectHideFlags: 0
@@ -2807,6 +2825,7 @@ GameObject:
   - component: {fileID: 633429435}
   - component: {fileID: 633429434}
   - component: {fileID: 633429433}
+  - component: {fileID: 633429438}
   m_Layer: 0
   m_Name: creeg
   m_TagString: Untagged
@@ -2827,6 +2846,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alien: {fileID: 1200047131}
   gifts: 0
+  love: You're alright for an alien!
   prefer: 2
   whatFlower: 
   speechCanvas: {fileID: 116707338}
@@ -2934,6 +2954,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &633429438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 633429432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e26cb682b39b25c4a8ed5a4255b099ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  def: There's no chance ANYTHING you say could be important enough for ME to listen.
+    Buzz off.
+  thanks: Alright, so you found ONE thing that I ACTUALLY like. Do you want a medal
+    or something?
+  nah: Exactly what I would expect from someone like you. KEEP WALKING.
+  love: 
+  gifts: 0
 --- !u!1 &668203360
 GameObject:
   m_ObjectHideFlags: 0
@@ -7601,6 +7639,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alien: {fileID: 1200047131}
   gifts: 0
+  love: You're alright for an alien!
   prefer: 0
   whatFlower: 
   speechCanvas: {fileID: 116707338}
@@ -10501,6 +10540,7 @@ GameObject:
   - component: {fileID: 2090469089}
   - component: {fileID: 2090469088}
   - component: {fileID: 2090469087}
+  - component: {fileID: 2090469092}
   m_Layer: 0
   m_Name: tang
   m_TagString: Untagged
@@ -10521,6 +10561,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alien: {fileID: 1200047131}
   gifts: 0
+  love: You're alright for an alien!
   prefer: 0
   whatFlower: 
   speechCanvas: {fileID: 116707338}
@@ -10628,6 +10669,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2090469092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2090469086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3f980d10fd360644aabc6c056d8ed6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  def: Woah! Sure I'm impressed that you're an alien and all, but I don't have time
+    for this right now!
+  thanks: Hey! Where did you find this!? Have any more?!
+  nah: Ugh! Just keep it to yourself, alien dude. I don't have time for trash.
+  love: 
+  gifts: 0
 --- !u!1 &2102478484
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,9 +12,14 @@ public class friend : MonoBehaviour {
 	private string def = "Hey! This is what I say by default!";
     private string thanks = "Wow! What a friend!";
     private string nah = "I'm not a fan of this one";
+    public string love = "You're alright for an alien!";
     private string curMes;
 
-	private float rot = 0;
+    private tang tangSpeech;
+    private trebbis trebbisSpeech;
+    private creeg creegSpeech;
+
+    private float rot = 0;
 
 	private float speed = 1.0f;
 	private float maxSpeed = 2.0f;
@@ -42,14 +47,35 @@ public class friend : MonoBehaviour {
 	[SerializeField] Text speech;
 
 	void Start() {
-		curMes = def;
-
         talkedTo = false;
 
 		rot = Random.Range(0, 360);
 		delta = 0;
 
         whatFlower = prefer.ToString();
+
+        tangSpeech = GetComponent<tang>();
+        trebbisSpeech = GetComponent<trebbis>();
+        creegSpeech = GetComponent<creeg>();
+        if (tangSpeech != null) {
+            def = tangSpeech.def;
+            thanks = tangSpeech.thanks;
+            nah = tangSpeech.nah;
+            love = tangSpeech.love;
+        } else if (trebbisSpeech != null) {
+            def = trebbisSpeech.def;
+            thanks = trebbisSpeech.thanks;
+            nah = trebbisSpeech.nah;
+            love = trebbisSpeech.love;
+        } else if (creegSpeech != null) {
+            def = creegSpeech.def;
+            thanks = creegSpeech.thanks;
+            nah = creegSpeech.nah;
+            love = creegSpeech.love;
+        }
+
+        curMes = def;
+
     }
 
     void Update() {
@@ -85,7 +111,20 @@ public class friend : MonoBehaviour {
 	public void GotGift() {
 		gifts++;
 		if (gifts > 3) {
-			curMes = string.Concat("You've given me ", gifts, " flowers! You're alright for an alien!");
+            if (tangSpeech != null) {
+                tangSpeech.gifts = gifts;
+                tangSpeech.LoveUpdate();
+                love = tangSpeech.love;
+            } else if (trebbisSpeech != null) {
+                trebbisSpeech.gifts = gifts;
+                trebbisSpeech.LoveUpdate();
+                love = trebbisSpeech.love;
+            } else if (creegSpeech != null) {
+                creegSpeech.gifts = gifts;
+                creegSpeech.LoveUpdate();
+                love = creegSpeech.love;
+            }
+			curMes = love;
         }
         talkedTo = true;
         speech.text = thanks;
