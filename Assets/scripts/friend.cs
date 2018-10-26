@@ -89,6 +89,9 @@ public class friend : MonoBehaviour {
 		    if (currentTime >= delta + wait) {
 		    	ChangeDirection ();
 		    }
+			if (speed == 0) {
+				GetComponent<SpriteRenderer>().sortingOrder = Mathf.RoundToInt (transform.position.y * 100f) * -1;
+			}
         } else {
 			Vector3 alienDir = alien.transform.position - transform.position;
 			float angle = Mathf.Atan2(alienDir.y, alienDir.x) * Mathf.Rad2Deg;

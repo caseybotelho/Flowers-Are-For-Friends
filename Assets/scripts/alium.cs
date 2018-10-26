@@ -58,6 +58,10 @@ public class alium : MonoBehaviour {
                 myFlower.direction *= -1;
             }
 
+			if (movY != 0) {
+				GetComponent<SpriteRenderer>().sortingOrder = Mathf.RoundToInt (transform.position.y * 100f) * -1;
+			}
+
             if (talking == false) { 
                 if (movX != 0) {
                     currentDir = Mathf.Sign(movX);
