@@ -8,7 +8,7 @@ public class flower : MonoBehaviour {
 
 	public bool attached = false;
 
-    float direction = 1;
+    public float direction = 1;
 
     public BoxCollider2D col;
 

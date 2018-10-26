@@ -52,6 +52,11 @@ public class alium : MonoBehaviour {
 
             // lover rotation
             // float rot = Input.GetAxis("Mouse X") * rotSens;
+            
+
+            if (myFlower && myFlower.direction == currentDir) {
+                myFlower.direction *= -1;
+            }
 
             if (talking == false) { 
                 if (movX != 0) {
