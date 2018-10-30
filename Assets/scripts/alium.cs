@@ -27,6 +27,8 @@ public class alium : MonoBehaviour {
 
     public bool talking;
 
+    bool wall = false;
+
     void Start() {
 		lover = GetComponent<CharacterController> ();
 
@@ -62,7 +64,7 @@ public class alium : MonoBehaviour {
 				GetComponent<SpriteRenderer>().sortingOrder = Mathf.RoundToInt (transform.position.y * 100f) * -1;
 			}
 
-            if (talking == false) { 
+            if (talking == false && wall == false) { 
                 if (movX != 0) {
                     currentDir = Mathf.Sign(movX);
                     if (lastDir != currentDir) {
@@ -212,6 +214,13 @@ public class alium : MonoBehaviour {
             }
         }
     }
+
+    void OnTriggerEnter2D(Collider2D hit) {
+        if(hit.gameObject.tag == "Environmental") {
+            wall = true;
+            Debug.Log(wall);
+        }
+    } 
 
     private void ChangePos() { 
         myFlower.alium = this.gameObject;
