@@ -86,7 +86,7 @@ public class alium : MonoBehaviour {
                     //testSprite = Instantiate (testSpritePrefab) as GameObject;
                     //testSprite.transform.position = transform.TransformPoint (0, .1f, 0);
                     //testSprite.transform.rotation = transform.rotation;
-                    RaycastHit2D hit = Physics2D.CircleCast(transform.position, 2.0f, transform.up, 2.0f);
+                    RaycastHit2D hit = Physics2D.CircleCast(transform.position, .5f, new Vector2(currentDir, 0), 2.0f);
                     if (hit.collider) {
                         myFriend = hit.transform.gameObject.GetComponent<friend>();
 		    	    	if (myFlower == null) {

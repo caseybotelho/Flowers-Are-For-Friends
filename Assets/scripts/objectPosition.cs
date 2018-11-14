@@ -6,7 +6,11 @@ public class objectPosition : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		GetComponent<SpriteRenderer> ().sortingOrder = Mathf.RoundToInt (transform.position.y * 100f - 150f) * -1;
+        if (this.gameObject.name == "house") { 
+		    GetComponent<SpriteRenderer> ().sortingOrder = Mathf.RoundToInt (transform.position.y * 100f - 325f) * -1;
+        } else {
+		    GetComponent<SpriteRenderer> ().sortingOrder = Mathf.RoundToInt (transform.position.y * 100f - 150f) * -1;
+        }
 	}
 	
 	// Update is called once per frame
