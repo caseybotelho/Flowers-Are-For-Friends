@@ -6,8 +6,11 @@ using UnityEngine.UI;
 public class friend : MonoBehaviour {
 
     [SerializeField] GameObject alien;
+    [SerializeField] private GameObject controller;
 
-	public int gifts = 0;
+    gameController behaviour;
+
+    public int gifts = 0;
 
 	private string def = "Hey! This is what I say by default!";
     private string thanks = "Wow! What a friend!";
@@ -45,8 +48,12 @@ public class friend : MonoBehaviour {
 
 	[SerializeField] Canvas speechCanvas;
 	[SerializeField] Text speech;
+    [SerializeField] Text total;
 
-	void Start() {
+    void Start() {
+
+        behaviour = controller.GetComponent<gameController>();
+
         talkedTo = false;
 
 		rot = Random.Range(0, 360);
@@ -113,6 +120,7 @@ public class friend : MonoBehaviour {
 
 	public void GotGift() {
 		gifts++;
+        total.text = gifts + "/4";
 		if (gifts > 3) {
             if (tangSpeech != null) {
                 tangSpeech.gifts = gifts;
@@ -132,6 +140,9 @@ public class friend : MonoBehaviour {
         talkedTo = true;
         speech.text = thanks;
         speechCanvas.enabled = true;
+        if (gifts == 4) {
+            behaviour.NewFriend();
+        }
     }
 
 	public void NoThanks() {

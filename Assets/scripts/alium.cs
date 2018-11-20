@@ -23,7 +23,7 @@ public class alium : MonoBehaviour {
     flower myFlower;
     friend myFriend;
     inventory menuBehaviour;
-    gamecontroller behaviour;
+    gameController behaviour;
 
     public bool talking;
 
@@ -39,7 +39,7 @@ public class alium : MonoBehaviour {
 
         menuBehaviour = mainMenu.GetComponent<inventory>();
 
-        behaviour = controller.GetComponent<gamecontroller>();
+        behaviour = controller.GetComponent<gameController>();
     }
 
     void Update() {

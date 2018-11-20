@@ -1,10 +1,15 @@
 fileFormatVersion: 2
 guid: a2422e989311d93439841657a8fa1d01
-timeCreated: 1510801515
-licenseType: Free
 MonoImporter:
+  externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - alien: {instanceID: 0}
+  - controller: {fileID: 1262594317063644, guid: 9cc913d1897951b4e84cc73cd8561214,
+      type: 2}
+  - speechCanvas: {instanceID: 0}
+  - speech: {instanceID: 0}
+  - total: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
