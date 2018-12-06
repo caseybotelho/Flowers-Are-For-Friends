@@ -16,7 +16,6 @@ public class goal : MonoBehaviour {
     }
 	
 	void Update () {
-        Debug.Log(goalStatus);
 	}
 
     public void GoalUpdate() {

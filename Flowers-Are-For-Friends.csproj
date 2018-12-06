@@ -312,6 +312,8 @@
     <Compile Include="Assets\scripts\npc specific\tang.cs" />
     <Compile Include="Assets\scripts\npc specific\trebbis.cs" />
     <Compile Include="Assets\scripts\objectPosition.cs" />
+    <Compile Include="Assets\scripts\propulsion.cs" />
+    <Compile Include="Assets\scripts\shiphouse.cs" />
     <Compile Include="Assets\scripts\speech.cs" />
   </ItemGroup>
   <ItemGroup>
