@@ -29,6 +29,8 @@ public class alium : MonoBehaviour {
 
     bool wall = false;
 
+    bool ready = false;
+
     void Start() {
 		lover = GetComponent<CharacterController> ();
 
@@ -213,6 +215,9 @@ public class alium : MonoBehaviour {
                 Debug.Log(myFlower);
             }
         }
+        if (behaviour.friendTotal == 3 && ready == false) {
+            GetReady();
+        }
     }
 
     void OnTriggerEnter2D(Collider2D hit) {
@@ -225,5 +230,9 @@ public class alium : MonoBehaviour {
     private void ChangePos() { 
         myFlower.alium = this.gameObject;
         myFlower.newPos();
+    }
+
+    private void GetReady() {
+        this.gameObject.transform.GetChild(0).gameObject.SetActive(true);
     }
 }

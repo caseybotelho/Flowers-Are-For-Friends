@@ -454,7 +454,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alien: {fileID: 1200047131}
   controller: {fileID: 1511133984}
-  gifts: 0
+  gifts: 3
   love: You're alright for an alien!
   prefer: 1
   whatFlower: 
@@ -2921,7 +2921,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alien: {fileID: 1200047131}
   controller: {fileID: 1511133984}
-  gifts: 0
+  gifts: 3
   love: You're alright for an alien!
   prefer: 2
   whatFlower: 
@@ -3145,6 +3145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1200047131}
+  house: {fileID: 729371672}
 --- !u!1 &677585293
 GameObject:
   m_ObjectHideFlags: 0
@@ -3442,7 +3443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68a931b826fcc09438c9411dabfcb883, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  takeoff: 1
+  takeoff: 0
   alium: 0
 --- !u!4 &729371674
 Transform:
@@ -3467,10 +3468,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -3.5}
+  m_Offset: {x: 0.018995047, y: -0.5651305}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3481,7 +3482,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 5.824963, y: 7.5155997}
   m_EdgeRadius: 0
 --- !u!1 &768003700
 GameObject:
@@ -5238,8 +5239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19c97a1a456f3ba4f926fe3e0ace5023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  takeoff: 1
-  alium: 1
+  takeoff: 0
 --- !u!1001 &976266012
 Prefab:
   m_ObjectHideFlags: 0
@@ -6263,7 +6263,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.2764472, y: 0.2764472, z: 0.2764472}
-  m_Children: []
+  m_Children:
+  - {fileID: 1452650880}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7446,6 +7447,81 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &1452650879
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1452650880}
+  - component: {fileID: 1452650881}
+  - component: {fileID: 1452650882}
+  m_Layer: 2
+  m_Name: itme
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1452650880
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1452650879}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1200047134}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1452650881
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1452650879}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.2976684, y: 0.0410558}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.6037036, y: 1.4394836}
+  m_EdgeRadius: 0
+--- !u!50 &1452650882
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1452650879}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.17642301
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &1460422235
 Prefab:
   m_ObjectHideFlags: 0
@@ -11034,7 +11110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alien: {fileID: 1200047131}
   controller: {fileID: 1511133984}
-  gifts: 0
+  gifts: 3
   love: You're alright for an alien!
   prefer: 0
   whatFlower: 
