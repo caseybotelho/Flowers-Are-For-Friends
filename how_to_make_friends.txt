@@ -4,7 +4,7 @@ XXX 3. fix when character goes behind sprites XXX
 XXX 4. make number of flowers needed appear in character's text after giving them
 XXX 5. create meter on house that goes up for each friend XXX
 XXX 6. make ship fly away with you inside at max friends XXX
-7. make title screen
+7. make title screen (use no recoil dog)
 8. make ending screen
 9. figure out tilemapping
 10. make some sound effects for alien
