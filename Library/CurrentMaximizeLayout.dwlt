@@ -23,7 +23,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 7221
+  controlID: 14650
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 7222
+  controlID: 14615
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 7223
+  controlID: 14616
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -198,29 +198,29 @@ MonoBehaviour:
     height: 560
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
-    scrollPos: {x: 0, y: 209}
-    m_SelectedIDs: 3429feff
-    m_LastClickedID: -120524
-    m_ExpandedIDs: 90c3feff8accfeffa2d5feff3cdafeff2c0affff8632ffff04baffffaeccffff84cfffff5eeeffffe0f1ffff6cf3fffff0fbffff0000000092410000564200009a42000046450000f64e0000084f0000
+    scrollPos: {x: 0, y: 50}
+    m_SelectedIDs: a2390000
+    m_LastClickedID: 14754
+    m_ExpandedIDs: ac7effff26caffffe6fbffff00000000bc38000080390000a2390000c4390000403b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: house
+      m_OriginalName: house
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 14898
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 5}
     m_SearchString: 
   m_ExpandedScenes:
-  - main
+  - title
   m_CurrenRootInstanceID: 0
   m_LockTracker:
     m_IsLocked: 0
@@ -279,14 +279,14 @@ MonoBehaviour:
     height: 560
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 4045.0836107515815
+  lastFramingTime: 6044.106996407317
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.0312512, y: 0.807083, z: -9.923828}
+    m_Target: {x: 0.745296, y: 6.4506483, z: 0}
     speed: 2
-    m_Value: {x: -1.0312512, y: 0.807083, z: -9.923828}
+    m_Value: {x: 0.745296, y: 6.4506483, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -318,9 +318,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 14.448142
+    m_Target: 23.896832
     speed: 2
-    m_Value: 14.448142
+    m_Value: 23.896832
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -462,20 +462,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/raw_assets
+    - Assets/scripts
   m_ViewMode: 1
   m_StartGridSize: 82
   m_LastFolders:
-  - Assets/raw_assets
+  - Assets/scripts
   m_LastFoldersGridSize: 82
   m_LastProjectPath: D:\Everything Else\development\Unity Projects\Flowers-Are-For-Friends
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 98090000
-    m_LastClickedID: 2456
-    m_ExpandedIDs: 00000000fc0800007a0b000000ca9a3bffffff7f
+    m_SelectedIDs: 8a0b0000
+    m_LastClickedID: 2954
+    m_ExpandedIDs: 00000000040900008a0b000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -503,7 +503,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000fc0800007a0b000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000040900008a0b000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -528,9 +528,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 3429feff
-    m_LastClickedInstanceID: -120524
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: a2390000
+    m_LastClickedInstanceID: 14754
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 2a2b00001e390000cc360000923800008c32fdff562500000a3efeff74220000de21000000000000a62b0000ce2c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
