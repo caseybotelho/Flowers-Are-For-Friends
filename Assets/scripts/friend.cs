@@ -30,6 +30,8 @@ public class friend : MonoBehaviour {
 
 	float wait = 0;
 
+    Vector3 initialPos;
+
 	private float delta;
 	private float lastTime;
 	private float currentTime;
@@ -83,12 +85,18 @@ public class friend : MonoBehaviour {
 
         curMes = def;
 
+        initialPos = transform.position;
+
     }
 
     void Update() {
         if (talkedTo == false) { 
 		    transform.Translate (0, speed * Time.deltaTime, 0);
 		    transform.localEulerAngles = new Vector3 (0, 0, rot);
+            Vector3 maxPos = transform.position;
+            maxPos.y = Mathf.Clamp(transform.position.y, initialPos.y - 4.1f, initialPos.y + 4.1f);
+            maxPos.x = Mathf.Clamp(transform.position.x, initialPos.x - 4.1f, initialPos.x + 4.1f);
+            transform.position = maxPos;
 		    currentTime = Time.fixedTime - lastTime;
 		    if (currentTime >= delta) {
 		    	speed = 0;
