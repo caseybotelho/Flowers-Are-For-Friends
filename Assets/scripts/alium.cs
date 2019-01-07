@@ -31,6 +31,8 @@ public class alium : MonoBehaviour {
 
     bool ready = false;
 
+    private AudioSource voiceSource;
+
     void Start() {
 		lover = GetComponent<CharacterController> ();
 
@@ -42,6 +44,8 @@ public class alium : MonoBehaviour {
         menuBehaviour = mainMenu.GetComponent<inventory>();
 
         behaviour = controller.GetComponent<gameController>();
+
+        voiceSource = GetComponent<AudioSource>();
     }
 
     void Update() {
@@ -53,6 +57,11 @@ public class alium : MonoBehaviour {
             Vector3 mov = new Vector3(movX, movY, 0);
             mov = Vector3.ClampMagnitude(mov, baseSpeed);
             mov *= Time.deltaTime;
+            if (transform.position.z != 0) {
+                Vector3 fixZ = transform.position;
+                fixZ.z = 0;
+                transform.position = fixZ;
+            }
 
             // lover rotation
             // float rot = Input.GetAxis("Mouse X") * rotSens;
@@ -217,6 +226,9 @@ public class alium : MonoBehaviour {
         }
         if (behaviour.friendTotal == 3 && ready == false) {
             GetReady();
+        }
+        if (Input.GetKeyDown("q")) {
+            voiceSource.Play();
         }
     }
 

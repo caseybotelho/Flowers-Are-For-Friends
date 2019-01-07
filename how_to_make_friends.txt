@@ -7,10 +7,11 @@ XXX 6. make ship fly away with you inside at max friends XXX
 XXX 7. make title screen XXX
 XXX 8. make ending screen XXX
 XXX 9. figure out tilemapping XXX
-10. make some sound effects for alien
+XXX 10. make some sound effects for alien (space bar noise, steal script from dog) XXX
 11. add border to world
 12. make sounds for npc
 13. make better inventory box
 14. add dog to splash screen
 15. make sounds for rockets
 16. make speech box and pick better font
+17. intro text including some indication of controls

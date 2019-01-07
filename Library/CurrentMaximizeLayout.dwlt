@@ -20,10 +20,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 987
-  m_MinSize: {x: 683, y: 471}
-  m_MaxSize: {x: 14002, y: 14021}
+  m_MinSize: {x: 681, y: 492}
+  m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 6419
+  controlID: 2745
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -119,10 +119,10 @@ MonoBehaviour:
     y: 0
     width: 1401
     height: 987
-  m_MinSize: {x: 406, y: 471}
-  m_MaxSize: {x: 10000, y: 14021}
+  m_MinSize: {x: 404, y: 492}
+  m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 6377
+  controlID: 2746
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,10 +143,10 @@ MonoBehaviour:
     y: 0
     width: 1401
     height: 581
-  m_MinSize: {x: 406, y: 221}
-  m_MaxSize: {x: 8006, y: 4021}
+  m_MinSize: {x: 404, y: 221}
+  m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
-  controlID: 6340
+  controlID: 2747
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -198,10 +198,10 @@ MonoBehaviour:
     height: 560
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
-    scrollPos: {x: 0, y: 129}
-    m_SelectedIDs: c8dafcff
-    m_LastClickedID: -206136
-    m_ExpandedIDs: 3addfffff0fbffff000000000e0d0000260e0000
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: f00c0000
+    m_LastClickedID: 3312
+    m_ExpandedIDs: f0fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -417,8 +417,8 @@ MonoBehaviour:
     y: 581
     width: 1401
     height: 406
-  m_MinSize: {x: 230, y: 250}
-  m_MaxSize: {x: 10000, y: 10000}
+  m_MinSize: {x: 232, y: 271}
+  m_MaxSize: {x: 10002, y: 10021}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
@@ -462,20 +462,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/scripts
+    - Assets/soundeffects
   m_ViewMode: 1
   m_StartGridSize: 82
   m_LastFolders:
-  - Assets/scripts
+  - Assets/soundeffects
   m_LastFoldersGridSize: 82
   m_LastProjectPath: D:\Everything Else\development\Unity Projects\Flowers-Are-For-Friends
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 8e0b0000
-    m_LastClickedID: 2958
-    m_ExpandedIDs: 00000000000900008e0b0000403200004e320000ae32000000ca9a3bffffff7f
+    m_SelectedIDs: a42e0000
+    m_LastClickedID: 11940
+    m_ExpandedIDs: 00000000020900004e0900009e0b0000902e0000922e000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -503,7 +503,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000000900008e0b0000403200004e320000ae32000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000020900004e0900009e0b0000902e0000922e000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -528,8 +528,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: c8dafcff
-    m_LastClickedInstanceID: -206136
+    m_SelectedInstanceIDs: f00c0000
+    m_LastClickedInstanceID: 3312
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 2a2b00001e390000cc360000923800008c32fdff562500000a3efeff74220000de21000000000000a62b0000ce2c00004a65ffffde320000
     m_RenameOverlay:
@@ -606,7 +606,7 @@ MonoBehaviour:
   m_MinSize: {x: 277, y: 271}
   m_MaxSize: {x: 4002, y: 8021}
   vertical: 1
-  controlID: 6420
+  controlID: 2457
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -625,8 +625,8 @@ MonoBehaviour:
     y: 0
     width: 519
     height: 658
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 71}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
