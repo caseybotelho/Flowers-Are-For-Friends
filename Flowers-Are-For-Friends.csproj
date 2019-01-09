@@ -316,6 +316,7 @@
     <Compile Include="Assets\scripts\propulsion.cs" />
     <Compile Include="Assets\scripts\shiphouse.cs" />
     <Compile Include="Assets\scripts\speech.cs" />
+    <Compile Include="Assets\scripts\spriteInfo.cs" />
     <Compile Include="Assets\scripts\titleScreen.cs" />
   </ItemGroup>
   <ItemGroup>

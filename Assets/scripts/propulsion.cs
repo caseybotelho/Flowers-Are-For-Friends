@@ -29,9 +29,9 @@ public class propulsion : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D collision) {
         Debug.Log("test");
         if (takeoff == true) { 
-            if (collision.gameObject.name == "itme") {
+            if (collision.gameObject.name == "alien") {
                 alium = true;
-                collision.gameObject.transform.parent.gameObject.SetActive(false);
+                collision.gameObject.SetActive(false);
             }
         } else {
             collision = null;

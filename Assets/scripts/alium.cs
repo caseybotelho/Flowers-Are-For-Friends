@@ -7,19 +7,22 @@ public class alium : MonoBehaviour {
     [SerializeField] private Canvas mainMenu;
     [SerializeField] private GameObject controller;
 
+    private Rigidbody2D body;
+
     [SerializeField] private GameObject flowerPrefab;
     private GameObject flower;
 
     private const float baseSpeed = 6.0f;
-	private const float rotSens = 9.0f;
+    private const float rotSens = 9.0f;
 
-	float currentDir = -1;
-	float lastDir = -1;
+    float currentDir = -1;
+    float lastDir = -1;
 
-	[SerializeField] private GameObject testSpritePrefab;
-	private GameObject testSprite;
+    [SerializeField] private GameObject testSpritePrefab;
+    private GameObject testSprite;
 
-	private CharacterController lover;
+    [SerializeField] private GameObject alienAdd;
+    private spriteInfo rotation;
     flower myFlower;
     friend myFriend;
     inventory menuBehaviour;
@@ -34,7 +37,9 @@ public class alium : MonoBehaviour {
     private AudioSource voiceSource;
 
     void Start() {
-		lover = GetComponent<CharacterController> ();
+        rotation = alienAdd.GetComponent<spriteInfo>();
+
+        body = GetComponent<Rigidbody2D>();
 
 		Cursor.lockState = CursorLockMode.Locked;
 		Cursor.visible = false;
@@ -56,7 +61,7 @@ public class alium : MonoBehaviour {
 
             Vector3 mov = new Vector3(movX, movY, 0);
             mov = Vector3.ClampMagnitude(mov, baseSpeed);
-            mov *= Time.deltaTime;
+            //mov *= Time.deltaTime;
             if (transform.position.z != 0) {
                 Vector3 fixZ = transform.position;
                 fixZ.z = 0;
@@ -67,26 +72,24 @@ public class alium : MonoBehaviour {
             // float rot = Input.GetAxis("Mouse X") * rotSens;
             
 
-            if (myFlower && myFlower.direction == currentDir) {
-                myFlower.direction *= -1;
-            }
-
 			if (movY != 0) {
-				GetComponent<SpriteRenderer>().sortingOrder = Mathf.RoundToInt (transform.position.y * 100f) * -1;
+                rotation.SpriteOrder();
 			}
 
             if (talking == false && wall == false) { 
                 if (movX != 0) {
                     currentDir = Mathf.Sign(movX);
+                    rotation.currentDir = Mathf.Sign(movX);
                     if (lastDir != currentDir) {
-                        transform.Rotate(0, 180f, 0);
+                        rotation.Rotate();
                         lastDir = currentDir;
                         if (myFlower) {
                             myFlower.Flip();
                         }
                     }
                 }
-                lover.Move(mov);
+                Vector2 velocity = new Vector2(mov.x, mov.y);
+                body.MovePosition(new Vector2(transform.position.x, transform.position.y) + velocity * Time.fixedDeltaTime);
             }
 
             // transform.Rotate (0, 0, -rot);
@@ -232,15 +235,11 @@ public class alium : MonoBehaviour {
         }
     }
 
-    void OnTriggerEnter2D(Collider2D hit) {
-        if(hit.gameObject.tag == "Environmental") {
-            wall = true;
-            Debug.Log(wall);
-        }
-    } 
-
     private void ChangePos() { 
         myFlower.alium = this.gameObject;
+        if (myFlower && myFlower.direction == currentDir) {
+            myFlower.direction *= -1;
+        }
         myFlower.newPos();
     }
 

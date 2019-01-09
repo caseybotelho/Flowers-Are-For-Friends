@@ -35,8 +35,10 @@ public class friend : MonoBehaviour {
 	private float delta;
 	private float lastTime;
 	private float currentTime;
+    private bool delay;
 
     private bool talkedTo;
+    private bool lastTalked;
 
     public enum FlowerTypes {
         snapdragon,
@@ -57,6 +59,7 @@ public class friend : MonoBehaviour {
         behaviour = controller.GetComponent<gameController>();
 
         talkedTo = false;
+        delay = false;
 
 		rot = Random.Range(0, 360);
 		delta = 0;
@@ -91,27 +94,29 @@ public class friend : MonoBehaviour {
 
     void Update() {
         if (talkedTo == false) { 
-		    transform.Translate (0, speed * Time.deltaTime, 0);
-		    transform.localEulerAngles = new Vector3 (0, 0, rot);
-            Vector3 maxPos = transform.position;
-            maxPos.y = Mathf.Clamp(transform.position.y, initialPos.y - 4.1f, initialPos.y + 4.1f);
-            maxPos.x = Mathf.Clamp(transform.position.x, initialPos.x - 4.1f, initialPos.x + 4.1f);
-            transform.position = maxPos;
-		    currentTime = Time.fixedTime - lastTime;
-		    if (currentTime >= delta) {
-		    	speed = 0;
-		    }
-		    if (currentTime >= delta + wait) {
-		    	ChangeDirection ();
-		    }
-			if (speed == 0) {
-				GetComponent<SpriteRenderer>().sortingOrder = Mathf.RoundToInt (transform.position.y * 100f) * -1;
-			}
+            if (delay == false) {
+		        if (currentTime >= delta) {
+		        	speed = 0;
+		        }
+		        if (currentTime >= delta + wait) {
+		        	StartCoroutine(ChangeDirection());
+		        }
+			    if (speed == 0) {
+			    	GetComponent<SpriteRenderer>().sortingOrder = Mathf.RoundToInt (transform.position.y * 100f) * -1;
+			    }
+		        transform.Translate (0, speed * Time.deltaTime, 0);
+                Vector3 maxPos = transform.position;
+                maxPos.y = Mathf.Clamp(transform.position.y, initialPos.y - 4.1f, initialPos.y + 4.1f);
+                maxPos.x = Mathf.Clamp(transform.position.x, initialPos.x - 4.1f, initialPos.x + 4.1f);
+                transform.position = maxPos;
+		        currentTime = Time.fixedTime - lastTime;
+            }
         } else {
 			Vector3 alienDir = alien.transform.position - transform.position;
 			float angle = Mathf.Atan2(alienDir.y, alienDir.x) * Mathf.Rad2Deg;
 			Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
 			transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.deltaTime * 6);
+            delay = true;
         }
 	}
 
@@ -124,6 +129,7 @@ public class friend : MonoBehaviour {
     public void Bye() {
         speechCanvas.enabled = false;
         talkedTo = false;
+        StartCoroutine(MoveDelay());
     }
 
 	public void GotGift() {
@@ -159,23 +165,29 @@ public class friend : MonoBehaviour {
         speechCanvas.enabled = true;
     }
 
-	void OnTriggerEnter2D(Collider2D other) {
-		if (other.transform.position == alien.transform.position) {
-			talkedTo = true;
-		}
-	}
+	//void OnTriggerEnter2D(Collider2D other) {
+	//	if (other.transform.position == alien.transform.position) {
+	//		talkedTo = true;
+	//	}
+	//}
+    //
+	//void OnTriggerExit2D(Collider2D other) {
+	//	if (other.transform.position == alien.transform.position) {
+	//		talkedTo = false;
+	//	}
+	//}
+    private IEnumerator MoveDelay() {
+        yield return new WaitForSeconds(2f);
+        delay = false;
+    }
 
-	void OnTriggerExit2D(Collider2D other) {
-		if (other.transform.position == alien.transform.position) {
-			talkedTo = false;
-		}
-	}
-
-	private void ChangeDirection() {
+	private IEnumerator ChangeDirection() {
 		wait = Random.Range (0f, 2.0f);
 		rot = Random.Range (0, 360);
 		delta = Random.Range (.05f, 3.0f);
 		lastTime = Time.fixedTime;
 		speed = Random.Range (minSpeed, maxSpeed);
-	}
+        transform.localEulerAngles = new Vector3(0, 0, rot);
+        yield return new WaitForSeconds(.1f);
+    }
 }
