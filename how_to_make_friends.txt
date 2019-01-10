@@ -10,9 +10,10 @@ XXX 9. figure out tilemapping XXX
 XXX 10. make some sound effects for alien (space bar noise, steal script from dog) XXX
 XXX 11. add border to world XXX
 XXX 12. change alien movement to allow for 2d collider XXX
-13. make sounds for npc
+XXX 13. make sounds for npc XXX
 14. make better inventory box
 15. add dog to splash screen
 16. make sounds for rockets
 17. make speech box and pick better font
 18. intro text including some indication of controls
+19. add some kinda song
