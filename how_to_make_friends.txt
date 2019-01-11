@@ -11,9 +11,12 @@ XXX 10. make some sound effects for alien (space bar noise, steal script from do
 XXX 11. add border to world XXX
 XXX 12. change alien movement to allow for 2d collider XXX
 XXX 13. make sounds for npc XXX
-14. make better inventory box
+XXX 14. make better inventory box XXX
 15. add dog to splash screen
 16. make sounds for rockets
-17. make speech box and pick better font
+XXX 17. make speech box and pick better font XXX
 18. intro text including some indication of controls
 19. add some kinda song
+20. make gifts from friends
+21. add gifts to alium
+22. change dialogue to match new goal (flowers to say goodbye)
