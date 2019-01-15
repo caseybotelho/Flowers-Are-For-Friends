@@ -7,27 +7,56 @@ public class propulsion : MonoBehaviour {
     public bool takeoff = false;
     public bool alium = false;
     private bool go = false;
+    private bool initiated = false;
+    private bool changeLoop = false;
+    private bool quieter = false;
 
     public GameObject creditsObj;
+
+    private AudioSource running;
+    public AudioClip blastoff;
 
     // Use this for initialization
     void Start () {
 
-	}
+        running = GetComponent<AudioSource>();
+        running.enabled = !running.enabled;
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
-        if (takeoff == true && alium == true) {
+        if (takeoff == true && alium == true && initiated == false) {
             StartCoroutine(TakeOff());
+            initiated = true;
         }
         if (go == true) {
             transform.Translate(0, 3 * Time.deltaTime, 0);
             StartCoroutine(StartCredits());
+            Debug.Log(running.time);
+        }
+        
+        if (takeoff == true && running.enabled == false) {
+            running.enabled = true;
+        }
+
+        if (changeLoop == true) {
+            if (running.time > 5.8f) {
+                running.time = 4.8f;
+                if (quieter == false) {
+                    quieter = true;
+                }
+            }
+        }
+
+        if (quieter == true) {
+            if (running.volume > .05f) {
+                running.volume = running.volume - .001f;
+            }
         }
 	}
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        Debug.Log("test");
         if (takeoff == true) { 
             if (collision.gameObject.name == "alien") {
                 alium = true;
@@ -41,6 +70,9 @@ public class propulsion : MonoBehaviour {
     private IEnumerator TakeOff() {
         yield return new WaitForSeconds(4);
         go = true;
+        running.clip = blastoff;
+        running.Play();
+        changeLoop = true;
     }
 
     private IEnumerator StartCredits() {

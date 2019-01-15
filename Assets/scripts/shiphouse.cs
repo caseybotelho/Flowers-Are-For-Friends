@@ -9,6 +9,7 @@ public class shiphouse : MonoBehaviour {
 
     public bool takeoff = false;
 
+
 	// Use this for initialization
 	void Start () {
         originPosition = transform.localPosition;

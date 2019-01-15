@@ -12,11 +12,12 @@ XXX 11. add border to world XXX
 XXX 12. change alien movement to allow for 2d collider XXX
 XXX 13. make sounds for npc XXX
 XXX 14. make better inventory box XXX
-15. add dog to splash screen
-16. make sounds for rockets
-XXX 17. make speech box and pick better font XXX
-18. intro text including some indication of controls
-19. add some kinda song
+XXX 15. make sounds for rocket XXX
+XXX 16. make speech box and pick better font XXX
+17. intro text including some indication of controls
+18. add some kinda song
+19. make flames for rocket
 20. make gifts from friends
 21. add gifts to alium
 22. change dialogue to match new goal (flowers to say goodbye)
+23. add dog to splash screen
