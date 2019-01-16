@@ -173,6 +173,7 @@ public class alium : MonoBehaviour {
                     menuBehaviour.snapTotal--;
                     flower = Instantiate(flowerPrefab) as GameObject;
                     myFlower = flower.GetComponent<flower>();
+                    myFlower.direction = -currentDir;
                     myFlower.whatFlower = "snapdragon";
                     myFlower.alium = this.gameObject;
                     myFlower.attached = true;
@@ -195,6 +196,7 @@ public class alium : MonoBehaviour {
                     menuBehaviour.nightTotal--;
                     flower = Instantiate(flowerPrefab) as GameObject;
                     myFlower = flower.GetComponent<flower>();
+                    myFlower.direction = -currentDir;
                     myFlower.whatFlower = "night_rider";
                     myFlower.alium = this.gameObject;
                     myFlower.attached = true;
@@ -217,6 +219,7 @@ public class alium : MonoBehaviour {
                     menuBehaviour.dandTotal--;
                     flower = Instantiate(flowerPrefab) as GameObject;
                     myFlower = flower.GetComponent<flower>();
+                    myFlower.direction = -currentDir;
                     myFlower.whatFlower = "dandelion";
                     myFlower.alium = this.gameObject;
                     myFlower.attached = true;

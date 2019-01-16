@@ -16,11 +16,17 @@ public class propulsion : MonoBehaviour {
     private AudioSource running;
     public AudioClip blastoff;
 
+    public GameObject flames;
+    private Vector3 flamesOrigin;
+
     // Use this for initialization
     void Start () {
 
         running = GetComponent<AudioSource>();
-        running.enabled = !running.enabled;
+        running.enabled = false;
+
+        flames.SetActive(false);
+        flamesOrigin = flames.transform.localPosition;
 
     }
 	
@@ -31,6 +37,8 @@ public class propulsion : MonoBehaviour {
             initiated = true;
         }
         if (go == true) {
+            flames.SetActive(true);
+            flames.transform.localPosition = flamesOrigin + Random.insideUnitSphere * .1f;
             transform.Translate(0, 3 * Time.deltaTime, 0);
             StartCoroutine(StartCredits());
             Debug.Log(running.time);
