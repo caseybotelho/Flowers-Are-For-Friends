@@ -12,6 +12,8 @@ public class creeg : MonoBehaviour {
     private friend friendInfo;
     public int gifts;
 
+    public GameObject present;
+
     void Start () {
         friendInfo = GetComponent<friend>();
         gifts = friendInfo.gifts;   
@@ -19,6 +21,9 @@ public class creeg : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (gifts > 3) {
+            present.SetActive(true);
+        }
     }
 
     public void LoveUpdate() {

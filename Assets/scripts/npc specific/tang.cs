@@ -12,6 +12,8 @@ public class tang : MonoBehaviour {
     private friend friendInfo;
     public int gifts;
 
+    public GameObject present;
+
     void Start () {
         friendInfo = GetComponent<friend>();
         gifts = friendInfo.gifts;   
@@ -19,7 +21,8 @@ public class tang : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (gifts != friendInfo.gifts) {
+        if (gifts > 3) {
+            present.SetActive(true);
         }
     }
 

@@ -18,9 +18,11 @@ XXX 17. fix flower direction from inventory bug XXX
 XXX 18. intro text including some indication of controls XXX
 19. add some kinda song
 XXX 20. make flames for rocket XXX
-21. make gifts from friends
-22. add gifts to alium
+XXX 21. make gifts from friends XXX
+XXX 22. add gifts to alium XXX
 23. change dialogue to match new goal (flowers to say goodbye)
 24. fix npc movement to not rotate sprites
 25. change rocket fuel text on house
-26. add dog to splash screen
+26. make fence
+27. put flowers in garden with fence
+28. add dog to splash screen
