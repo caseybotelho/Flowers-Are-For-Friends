@@ -32,12 +32,15 @@ public class flower : MonoBehaviour {
         whatFlower = chooseFlower.ToString();
         flowerSprite = GetComponent<SpriteRenderer>();
         flowerSprite.sprite = snapSprite;
+
+        GetComponent<SpriteRenderer>().sortingOrder = Mathf.RoundToInt(transform.position.y * 100f) * -1;
     }
 	
 	void Update () {
 		if (attached) {
 			float xPos = alium.transform.position.x - (1.0f * direction);
 			transform.position = new Vector3(xPos, alium.transform.position.y , 0);
+            GetComponent<SpriteRenderer>().sortingOrder = Mathf.RoundToInt(transform.position.y * 100f) * -1;
             if (flowerSprite.enabled == false) {
                 flowerSprite.enabled = true;
             }

@@ -66,9 +66,9 @@ public class friend : MonoBehaviour {
 
         whatFlower = prefer.ToString();
 
-        tangSpeech = GetComponent<tang>();
-        trebbisSpeech = GetComponent<trebbis>();
-        creegSpeech = GetComponent<creeg>();
+        tangSpeech = GetComponentInChildren<tang>();
+        trebbisSpeech = GetComponentInChildren<trebbis>();
+        creegSpeech = GetComponentInChildren<creeg>();
         if (tangSpeech != null) {
             def = tangSpeech.def;
             thanks = tangSpeech.thanks;
@@ -99,10 +99,10 @@ public class friend : MonoBehaviour {
 		        	speed = 0;
 		        }
 		        if (currentTime >= delta + wait) {
-		        	StartCoroutine(ChangeDirection());
+		        	ChangeDirection();
 		        }
-			    if (speed == 0) {
-			    	GetComponent<SpriteRenderer>().sortingOrder = Mathf.RoundToInt (transform.position.y * 100f) * -1;
+			    if (speed != 0) {
+                    GetComponentInChildren<SpriteRenderer>().sortingOrder = Mathf.RoundToInt(transform.position.y * 100f) * -1;
 			    }
 		        transform.Translate (0, speed * Time.deltaTime, 0);
                 Vector3 maxPos = transform.position;
@@ -181,13 +181,31 @@ public class friend : MonoBehaviour {
         delay = false;
     }
 
-	private IEnumerator ChangeDirection() {
+	private void ChangeDirection() {
 		wait = Random.Range (0f, 2.0f);
 		rot = Random.Range (0, 360);
+        if (tangSpeech != null) {
+            if (rot >= 180) {
+                tangSpeech.tangSprite.flipX = true;
+            } else {
+                tangSpeech.tangSprite.flipX = false;
+            }
+        } else if (trebbisSpeech != null) {
+            if (rot < 180) {
+                trebbisSpeech.trebbisSprite.flipX = true;
+            } else {
+                trebbisSpeech.trebbisSprite.flipX = false;
+            }
+        } else if (creegSpeech != null) {
+            if (rot >= 180) {
+                creegSpeech.creegSprite.flipX = true;
+            } else {
+                creegSpeech.creegSprite.flipX = false;
+            }
+        }
 		delta = Random.Range (.05f, 3.0f);
 		lastTime = Time.fixedTime;
 		speed = Random.Range (minSpeed, maxSpeed);
         transform.localEulerAngles = new Vector3(0, 0, rot);
-        yield return new WaitForSeconds(.1f);
     }
 }

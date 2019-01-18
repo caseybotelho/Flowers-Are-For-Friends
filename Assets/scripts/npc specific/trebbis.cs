@@ -14,16 +14,28 @@ public class trebbis : MonoBehaviour {
 
     public GameObject present;
 
+    private Quaternion iniRot;
+
+    public SpriteRenderer trebbisSprite;
+
     void Start () {
-        friendInfo = GetComponent<friend>();
-        gifts = friendInfo.gifts;   
-	}
+        friendInfo = gameObject.GetComponentInParent<friend>();
+        gifts = friendInfo.gifts;
+
+        iniRot = transform.rotation;
+
+        trebbisSprite = GetComponent<SpriteRenderer>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
         if (gifts > 3) {
             present.SetActive(true);
         }
+    }
+
+    void LateUpdate() {
+        transform.rotation = iniRot;
     }
 
     public void LoveUpdate() {
