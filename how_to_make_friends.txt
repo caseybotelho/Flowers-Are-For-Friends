@@ -21,8 +21,11 @@ XXX 20. make flames for rocket XXX
 XXX 21. make gifts from friends XXX
 XXX 22. add gifts to alium XXX
 23. change dialogue to match new goal (flowers to say goodbye)
-24. fix npc movement to not rotate sprites
-25. change rocket fuel text on house
-26. make fence
-27. put flowers in garden with fence
-28. add dog to splash screen
+XXX 24. fix npc movement to not rotate sprites XXX
+XXX 25. fix flower sprite order XXX
+XXX 26. allow npcs to change sprite order while moving XXX
+27. change rocket fuel text on house
+XXX 28. make fence XXX
+29. put flowers in garden with fence
+30. fix fence appearing in front of rocket on takeoff
+31. add dog to splash screen
