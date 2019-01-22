@@ -208,4 +208,28 @@ public class friend : MonoBehaviour {
 		speed = Random.Range (minSpeed, maxSpeed);
         transform.localEulerAngles = new Vector3(0, 0, rot);
     }
+	public void FaceMe(Vector3 pos) {
+        float posX = pos.x;
+        if (posX < this.transform.position.x) {
+            if (creegSpeech != null && creegSpeech.creegSprite.flipX == true) {
+                creegSpeech.creegSprite.flipX = false;
+            }
+            if (trebbisSpeech != null && trebbisSpeech.trebbisSprite.flipX == false) {
+                trebbisSpeech.trebbisSprite.flipX = true;
+            }
+            if (tangSpeech != null && tangSpeech.tangSprite.flipX == true) {
+                tangSpeech.tangSprite.flipX = false;
+            }
+        } else {
+            if (creegSpeech != null && creegSpeech.creegSprite.flipX == false) {
+                creegSpeech.creegSprite.flipX = true;
+            }
+            if (trebbisSpeech != null && trebbisSpeech.trebbisSprite.flipX == true) {
+                trebbisSpeech.trebbisSprite.flipX = false;
+            }
+            if (tangSpeech != null && tangSpeech.tangSprite.flipX == false) {
+                tangSpeech.tangSprite.flipX = true;
+            }
+        }
+    }
 }

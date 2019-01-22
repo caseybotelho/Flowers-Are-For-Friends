@@ -24,8 +24,8 @@ XXX 22. add gifts to alium XXX
 XXX 24. fix npc movement to not rotate sprites XXX
 XXX 25. fix flower sprite order XXX
 XXX 26. allow npcs to change sprite order while moving XXX
-27. change rocket fuel text on house
+XXX 27. change rocket fuel text on house XXX
 XXX 28. make fence XXX
-29. put flowers in garden with fence
-30. fix fence appearing in front of rocket on takeoff
+XXX 29. put flowers in garden with fence XXX
+XXX 30. fix fence appearing in front of rocket on takeoff XXX
 31. add dog to splash screen

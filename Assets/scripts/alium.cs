@@ -110,6 +110,7 @@ public class alium : MonoBehaviour {
                             ChangePos();
                         }
                         if (myFriend) {
+                            myFriend.FaceMe(transform.position);
                             talking = true;
                             if (myFlower && myFlower.attached){
                                 if (myFlower.whatFlower == myFriend.whatFlower) { 

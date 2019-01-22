@@ -109,7 +109,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 60
+  controlID: 81
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -260,7 +260,7 @@ MonoBehaviour:
   m_MinSize: {x: 277, y: 292}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 153
+  controlID: 82
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -279,8 +279,8 @@ MonoBehaviour:
     y: 0
     width: 536
     height: 656
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 71}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -413,24 +413,24 @@ MonoBehaviour:
     height: 560
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
-    scrollPos: {x: 0, y: 240}
-    m_SelectedIDs: b80d0000
-    m_LastClickedID: 3512
-    m_ExpandedIDs: f0fbffff00000000ec0c0000380d00009c0d0000b80d0000d40d0000960e0000a60e0000
+    scrollPos: {x: 0, y: 120}
+    m_SelectedIDs: 14d1faff
+    m_LastClickedID: -339692
+    m_ExpandedIDs: f0fbffff00000000ec0c0000f80c0000540d0000d00d0000ec0d0000100e0000380e0000660e0000b20e0000da0e0000ea0e0000a80f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: goal
+      m_OriginalName: goal
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: -339692
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 8}
     m_SearchString: 
@@ -466,14 +466,14 @@ MonoBehaviour:
     height: 560
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 4619.152030689322
+  lastFramingTime: 9766.428773921742
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -2.7427166, y: 6.151723, z: 0.0881712}
+    m_Target: {x: 487.1982, y: 201.60799, z: 21.5}
     speed: 2
-    m_Value: {x: -2.7427166, y: 6.151723, z: 0.0881712}
+    m_Value: {x: 487.1982, y: 201.60799, z: 21.5}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -505,9 +505,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 13.150382
+    m_Target: 536.0742
     speed: 2
-    m_Value: 13.150382
+    m_Value: 536.0742
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -623,20 +623,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/raw_assets
+    - Assets/scripts
   m_ViewMode: 1
   m_StartGridSize: 82
   m_LastFolders:
-  - Assets/raw_assets
+  - Assets/scripts
   m_LastFoldersGridSize: 82
   m_LastProjectPath: D:\Everything Else\development\Unity Projects\Flowers-Are-For-Friends
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: de090000
-    m_LastClickedID: 2526
-    m_ExpandedIDs: 00000000060900006a090000aa0900003c0c0000343000003630000000ca9a3bffffff7f
+    m_SelectedIDs: 440c0000
+    m_LastClickedID: 3140
+    m_ExpandedIDs: 00000000060900006e090000ae090000440c0000903000009230000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -664,7 +664,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000060900006a090000aa0900003c0c00003430000036300000
+    m_ExpandedIDs: 00000000060900006e090000ae090000440c00009030000092300000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -716,7 +716,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 10}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 82
   m_DirectoriesAreaWidth: 271
 --- !u!114 &20

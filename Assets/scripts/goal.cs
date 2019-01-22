@@ -5,14 +5,15 @@ using UnityEngine.UI;
 
 public class goal : MonoBehaviour {
 
-    TextMesh goalStatus;
+    Text goalStatus;
     public int totalFriends;
 
     void Start () {
 
-        goalStatus = GetComponent<TextMesh>();
+        goalStatus = GetComponent<Text>();
 
         totalFriends = 0;
+        goalStatus.color = Color.blue;
     }
 	
 	void Update () {
@@ -20,5 +21,8 @@ public class goal : MonoBehaviour {
 
     public void GoalUpdate() {
         goalStatus.text = totalFriends + "/3";
+        if (totalFriends == 3) {
+            goalStatus.color = Color.blue;
+        }
     }
 }
