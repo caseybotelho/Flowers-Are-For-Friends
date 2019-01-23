@@ -15,6 +15,8 @@ public class objectPosition : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        if (this.gameObject.name == "sword" || this.gameObject.name == "headphones" || this.gameObject.name == "frosting") {
+            GetComponent<SpriteRenderer>().sortingOrder = GetComponentInParent<spriteInfo>().currentOrder + 1;
+        }
 	}
 }

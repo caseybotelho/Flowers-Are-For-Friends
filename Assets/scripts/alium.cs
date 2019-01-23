@@ -29,6 +29,7 @@ public class alium : MonoBehaviour {
     gameController behaviour;
 
     public bool talking;
+    private bool thanked;
 
     bool wall = false;
 
@@ -51,6 +52,8 @@ public class alium : MonoBehaviour {
         behaviour = controller.GetComponent<gameController>();
 
         voiceSource = GetComponent<AudioSource>();
+
+        thanked = false;
     }
 
     void Update() {
@@ -126,9 +129,14 @@ public class alium : MonoBehaviour {
                         }
                     }
                 } else {
-                    myFriend.Bye();
-                    talking = false;
-                    myFriend = null;
+                    if (myFriend.trebbisSpeech && myFriend.curMes == myFriend.love && thanked == false) {
+                        myFriend.speech.text = myFriend.thanks2;
+                        thanked = true;
+                    } else {
+                        myFriend.Bye();
+                        talking = false;
+                        myFriend = null;
+                    }
                 }
             }
 

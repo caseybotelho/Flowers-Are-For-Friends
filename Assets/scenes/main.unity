@@ -208,6 +208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 36591304}
   - component: {fileID: 36591305}
+  - component: {fileID: 36591306}
   m_Layer: 2
   m_Name: headphones
   m_TagString: Untagged
@@ -273,6 +274,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &36591306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 36591303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b44f6ae459391e49b4fd1a36d01554f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &39549685
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,6 +294,7 @@ GameObject:
   m_Component:
   - component: {fileID: 39549686}
   - component: {fileID: 39549688}
+  - component: {fileID: 39549687}
   m_Layer: 2
   m_Name: sword
   m_TagString: Untagged
@@ -302,6 +315,17 @@ Transform:
   m_Father: {fileID: 1452650880}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 78.46}
+--- !u!114 &39549687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 39549685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b44f6ae459391e49b4fd1a36d01554f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &39549688
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -447,11 +471,11 @@ MonoBehaviour:
   alien: {fileID: 1200047131}
   controller: {fileID: 1511133984}
   gifts: 3
-  love: You're alright for an alien!
   prefer: 1
   whatFlower: 
   speechCanvas: {fileID: 116707338}
   speech: {fileID: 890522565}
+  charName: {fileID: 1430136068}
   total: {fileID: 1604263303}
 --- !u!50 &75964559
 Rigidbody2D:
@@ -544,6 +568,7 @@ RectTransform:
   - {fileID: 1022577949}
   - {fileID: 890522564}
   - {fileID: 1604263302}
+  - {fileID: 1430136067}
   m_Father: {fileID: 668203364}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1772,8 +1797,10 @@ MonoBehaviour:
   def: Woah! Sure I'm impressed that you're an alien and all, but I don't have time
     for this right now!
   thanks: Hey! Where did you find this!? Have any more?!
+  thanks2: 
   nah: Ugh! Just keep it to yourself, alien dude. I don't have time for trash.
   love: 
+  myName: 
   gifts: 0
   present: {fileID: 39549685}
   tangSprite: {fileID: 0}
@@ -7932,11 +7959,11 @@ MonoBehaviour:
   alien: {fileID: 1200047131}
   controller: {fileID: 1511133984}
   gifts: 3
-  love: You're alright for an alien!
   prefer: 2
   whatFlower: 
   speechCanvas: {fileID: 116707338}
   speech: {fileID: 890522565}
+  charName: {fileID: 1430136068}
   total: {fileID: 1604263303}
 --- !u!50 &633429434
 Rigidbody2D:
@@ -8684,8 +8711,10 @@ MonoBehaviour:
     Buzz off.
   thanks: Alright, so you found ONE thing that I ACTUALLY like. Do you want a medal
     or something?
+  thanks2: 
   nah: Exactly what I would expect from someone like you. KEEP WALKING.
   love: 
+  myName: 
   gifts: 0
   present: {fileID: 36591303}
   creegSprite: {fileID: 0}
@@ -8970,8 +8999,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 1.0999756, y: 134.94}
-  m_SizeDelta: {x: 785.9, y: 126.93}
+  m_AnchoredPosition: {x: 1.56, y: 122.18}
+  m_SizeDelta: {x: 786.82, y: 118.33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &890522565
 MonoBehaviour:
@@ -8994,7 +9023,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: ba458c1184541476091009c1abe64a66, type: 3}
-    m_FontSize: 30
+    m_FontSize: 26
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -9518,6 +9547,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1087454428}
   - component: {fileID: 1087454429}
+  - component: {fileID: 1087454430}
   m_Layer: 2
   m_Name: frosting
   m_TagString: Untagged
@@ -9583,6 +9613,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1087454430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1087454427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b44f6ae459391e49b4fd1a36d01554f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1112880469
 Prefab:
   m_ObjectHideFlags: 0
@@ -10540,6 +10581,80 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1430136066
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1430136067}
+  - component: {fileID: 1430136069}
+  - component: {fileID: 1430136068}
+  m_Layer: 0
+  m_Name: Name
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1430136067
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1430136066}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 116707335}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -311.85, y: -79.69}
+  m_SizeDelta: {x: 160, y: 25.42}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1430136068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1430136066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.49446908, g: 0, b: 0.509434, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: ba458c1184541476091009c1abe64a66, type: 3}
+    m_FontSize: 22
+    m_FontStyle: 2
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: name
+--- !u!222 &1430136069
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1430136066}
 --- !u!1 &1441075626
 GameObject:
   m_ObjectHideFlags: 0
@@ -10671,6 +10786,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDir: -1
+  currentOrder: 0
 --- !u!212 &1452650882
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10874,11 +10990,11 @@ MonoBehaviour:
   alien: {fileID: 1200047131}
   controller: {fileID: 0}
   gifts: 0
-  love: You're alright for an alien!
   prefer: 0
   whatFlower: 
   speechCanvas: {fileID: 116707338}
   speech: {fileID: 890522565}
+  charName: {fileID: 0}
   total: {fileID: 0}
 --- !u!212 &1485220810
 SpriteRenderer:
@@ -11172,10 +11288,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b92383ff7d5c50748bc5b7840862d27e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  def: Sorry, I'm just not in the mood... maybe another time, little guy.
-  thanks: Hey... how did you know this was my favorite flower...?
-  nah: You keep it... It's not really my thing...
+  def: 
+  thanks: 
+  thanks2: 
+  nah: 
   love: 
+  myName: 
   gifts: 0
   present: {fileID: 1087454427}
   trebbisSprite: {fileID: 0}
@@ -11309,7 +11427,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1604263302
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13433,11 +13551,11 @@ MonoBehaviour:
   alien: {fileID: 1200047131}
   controller: {fileID: 1511133984}
   gifts: 3
-  love: You're alright for an alien!
   prefer: 0
   whatFlower: 
   speechCanvas: {fileID: 116707338}
   speech: {fileID: 890522565}
+  charName: {fileID: 1430136068}
   total: {fileID: 1604263303}
 --- !u!50 &2090469088
 Rigidbody2D:

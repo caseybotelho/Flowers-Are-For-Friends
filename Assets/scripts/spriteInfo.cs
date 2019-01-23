@@ -7,6 +7,8 @@ public class spriteInfo : MonoBehaviour {
 	public float currentDir = -1;
 	float lastDir = -1;
 
+    public int currentOrder;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -24,5 +26,6 @@ public class spriteInfo : MonoBehaviour {
 
     public void SpriteOrder() {
         GetComponent<SpriteRenderer>().sortingOrder = Mathf.RoundToInt(transform.position.y * 100f) * -1;
+        currentOrder = Mathf.RoundToInt(transform.position.y * 100f) * -1;
     }
 }

@@ -13,14 +13,16 @@ public class friend : MonoBehaviour {
     public int gifts = 0;
 
 	private string def = "Hey! This is what I say by default!";
-    private string thanks = "Wow! What a friend!";
+    [System.NonSerialized] public string thanks = "Wow! What a friend!";
+    [System.NonSerialized] public string thanks2 = "Wow! What a friend!";
     private string nah = "I'm not a fan of this one";
-    public string love = "You're alright for an alien!";
-    private string curMes;
+    [System.NonSerialized] public string love = "You're alright for an alien!";
+    [System.NonSerialized] public string curMes;
+    private string myName;
 
-    private tang tangSpeech;
-    private trebbis trebbisSpeech;
-    private creeg creegSpeech;
+    [System.NonSerialized] public tang tangSpeech;
+    [System.NonSerialized] public trebbis trebbisSpeech;
+    [System.NonSerialized] public creeg creegSpeech;
 
     private float rot = 0;
 
@@ -51,7 +53,8 @@ public class friend : MonoBehaviour {
     public string whatFlower;
 
 	[SerializeField] Canvas speechCanvas;
-	[SerializeField] Text speech;
+	[SerializeField] public Text speech;
+    [SerializeField] public Text charName;
     [SerializeField] Text total;
 
     void Start() {
@@ -72,18 +75,24 @@ public class friend : MonoBehaviour {
         if (tangSpeech != null) {
             def = tangSpeech.def;
             thanks = tangSpeech.thanks;
+            thanks2 = tangSpeech.thanks2;
             nah = tangSpeech.nah;
             love = tangSpeech.love;
+            myName = tangSpeech.myName;
         } else if (trebbisSpeech != null) {
             def = trebbisSpeech.def;
             thanks = trebbisSpeech.thanks;
+            thanks2 = trebbisSpeech.thanks2;
             nah = trebbisSpeech.nah;
             love = trebbisSpeech.love;
+            myName = trebbisSpeech.myName;
         } else if (creegSpeech != null) {
             def = creegSpeech.def;
             thanks = creegSpeech.thanks;
+            thanks2 = creegSpeech.thanks2;
             nah = creegSpeech.nah;
             love = creegSpeech.love;
+            myName = creegSpeech.myName;
         }
 
         curMes = def;
@@ -122,7 +131,8 @@ public class friend : MonoBehaviour {
 
 	public void Hey() {
         talkedTo = true;
-		speech.text = curMes;
+        charName.text = myName;
+        speech.text = curMes;
 		speechCanvas.enabled = true;
 	}
 
