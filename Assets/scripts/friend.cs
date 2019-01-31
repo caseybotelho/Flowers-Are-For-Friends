@@ -42,6 +42,8 @@ public class friend : MonoBehaviour {
     private bool talkedTo;
     private bool lastTalked;
 
+    public bool thanked;
+
     public enum FlowerTypes {
         snapdragon,
         dandelion,
@@ -98,6 +100,8 @@ public class friend : MonoBehaviour {
         curMes = def;
 
         initialPos = transform.position;
+
+        thanked = false;
 
     }
 

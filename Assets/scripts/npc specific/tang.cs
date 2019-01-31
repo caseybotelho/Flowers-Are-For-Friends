@@ -21,10 +21,10 @@ public class tang : MonoBehaviour {
     public SpriteRenderer tangSprite;
 
     void Awake() {
-        def = "I can't believe this is goodbye... you'll check in every once in a while, right? Wait, do y'all even have phones up there?";
-        thanks = "You're the only one who never made fun of me for liking daffodils... Who cares if they're weeds? I like what I like.";
-        thanks2 = "I got something for you, too. Strawberry frosted, just how you like. Baked them mysel- oh you stole them from me and ate them before I even said this.";
-        nah = "You're growing them in your garden, right? Trebbis and Creeg will love these!";
+        def = "WAH! Don't sneak up on me like that! I've got too much on my mind today. What was I just doing...?";
+        thanks = "SNAPDRAGONS! Did I tell you those were my favorite? Or did you pull some weird alien trick?";
+        thanks2 = "OH! That reminded me! I was getting you this! Have a great trip, little buddy.";
+        nah = "*Tang is too distracted to notice the flower*";
         myName = "Tang";
     }
 
@@ -49,6 +49,6 @@ public class tang : MonoBehaviour {
     }
 
     public void LoveUpdate() {
-        love = string.Concat("Ah! Maybe I was a little too hasty before. Thanks for being there for me, friendo. (",gifts," gifts)");
+        love = string.Concat("How am I going to get anything done without you? You were my best personal assistent!");
     }
 }

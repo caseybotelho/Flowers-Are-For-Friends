@@ -29,7 +29,6 @@ public class alium : MonoBehaviour {
     gameController behaviour;
 
     public bool talking;
-    private bool thanked;
 
     bool wall = false;
 
@@ -53,7 +52,6 @@ public class alium : MonoBehaviour {
 
         voiceSource = GetComponent<AudioSource>();
 
-        thanked = false;
     }
 
     void Update() {
@@ -129,9 +127,15 @@ public class alium : MonoBehaviour {
                         }
                     }
                 } else {
-                    if (myFriend.trebbisSpeech && myFriend.curMes == myFriend.love && thanked == false) {
+                    if (myFriend.trebbisSpeech && myFriend.curMes == myFriend.love && myFriend.thanked == false) {
                         myFriend.speech.text = myFriend.thanks2;
-                        thanked = true;
+                        myFriend.thanked = true;
+                    } else if (myFriend.tangSpeech && myFriend.curMes == myFriend.love && myFriend.thanked == false) {
+                        myFriend.speech.text = myFriend.thanks2;
+                        myFriend.thanked = true;
+                    } else if (myFriend.creegSpeech && myFriend.curMes == myFriend.love && myFriend.thanked == false) {
+                        myFriend.speech.text = myFriend.thanks2;
+                        myFriend.thanked = true;
                     } else {
                         myFriend.Bye();
                         talking = false;

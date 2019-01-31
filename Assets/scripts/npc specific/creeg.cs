@@ -21,10 +21,10 @@ public class creeg : MonoBehaviour {
     public SpriteRenderer creegSprite;
     
     void Awake() {
-        def = "I can't believe this is goodbye... you'll check in every once in a while, right? Wait, do y'all even have phones up there?";
-        thanks = "You're the only one who never made fun of me for liking daffodils... Who cares if they're weeds? I like what I like.";
-        thanks2 = "I got something for you, too. Strawberry frosted, just how you like. Baked them mysel- oh you stole them from me and ate them before I even said this.";
-        nah = "You're growing them in your garden, right? Trebbis and Creeg will love these!";
+        def = "Oh, was today the day you were leaving? Not that I care or anything. Do you need something?";
+        thanks = "DAMN IT. I can't believe you grew me my favorite flower! Why you always gotta be a GOOD person? Er, alien.";
+        thanks2 = "I was going to wait until the last minute to give you this. Maybe throw it at your ship or something. CAN'T NOW.";
+        nah = "Yeah? What about it?";
         myName = "Creeg";
     }
 
@@ -49,6 +49,6 @@ public class creeg : MonoBehaviour {
     }
 
     public void LoveUpdate() {
-        love = string.Concat("I was too judgemental before. I don't MEAN to be. ANYWAY, thanks for sticking with me. (", gifts, " gifts)");
+        love = string.Concat("*Creeg is holding back tears while trying to give you a cool wink. It isn't working*");
     }
 }

@@ -471,6 +471,7 @@ MonoBehaviour:
   alien: {fileID: 1200047131}
   controller: {fileID: 1511133984}
   gifts: 3
+  thanked: 0
   prefer: 1
   whatFlower: 
   speechCanvas: {fileID: 116707338}
@@ -7959,6 +7960,7 @@ MonoBehaviour:
   alien: {fileID: 1200047131}
   controller: {fileID: 1511133984}
   gifts: 3
+  thanked: 0
   prefer: 2
   whatFlower: 
   speechCanvas: {fileID: 116707338}
@@ -9689,7 +9691,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1195479488
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10990,6 +10992,7 @@ MonoBehaviour:
   alien: {fileID: 1200047131}
   controller: {fileID: 0}
   gifts: 0
+  thanked: 0
   prefer: 0
   whatFlower: 
   speechCanvas: {fileID: 116707338}
@@ -13551,6 +13554,7 @@ MonoBehaviour:
   alien: {fileID: 1200047131}
   controller: {fileID: 1511133984}
   gifts: 3
+  thanked: 0
   prefer: 0
   whatFlower: 
   speechCanvas: {fileID: 116707338}
