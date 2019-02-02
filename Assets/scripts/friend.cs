@@ -149,7 +149,7 @@ public class friend : MonoBehaviour {
 	public void GotGift() {
 		gifts++;
         total.text = gifts + "/4";
-		if (gifts > 3) {
+		if (gifts == 4) {
             if (tangSpeech != null) {
                 tangSpeech.gifts = gifts;
                 tangSpeech.LoveUpdate();

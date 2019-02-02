@@ -16,7 +16,7 @@ XXX 15. make sounds for rocket XXX
 XXX 16. make speech box and pick better font XXX
 XXX 17. fix flower direction from inventory bug XXX
 XXX 18. intro text including some indication of controls XXX
-19. add some kinda song
+XXX 19. add some kinda song XXX
 XXX 20. make flames for rocket XXX
 XXX 21. make gifts from friends XXX
 XXX 22. add gifts to alium XXX
@@ -30,4 +30,8 @@ XXX 29. put flowers in garden with fence XXX
 XXX 30. fix fence appearing in front of rocket on takeoff XXX
 XXX 31. text can be multiple parts XXX
 XXX 32. fix gift sprite order issue XXX
-31. add dog to splash screen
+33. correct name not showing when talking to multiple people
+34. move creeg away from trees
+35. ui not sizing correctly
+36. restrict resolution
+37. add dog to splash screen
