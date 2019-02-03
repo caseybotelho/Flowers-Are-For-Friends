@@ -166,6 +166,7 @@ public class friend : MonoBehaviour {
 			curMes = love;
         }
         talkedTo = true;
+        charName.text = myName;
         speech.text = thanks;
         speechCanvas.enabled = true;
         if (gifts == 4) {
@@ -175,6 +176,7 @@ public class friend : MonoBehaviour {
 
 	public void NoThanks() {
         talkedTo = true;
+        charName.text = myName;
         speech.text = nah;
         speechCanvas.enabled = true;
     }
